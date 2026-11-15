@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D22.0.0-green.svg)](https://nodejs.org/)
-[![Tests: E2E](https://img.shields.io/badge/Tests-73%20Passing-brightgreen.svg)](#suíte-de-testes-e2e)
+[![Tests: E2E](https://img.shields.io/badge/Tests-70%20Passing-brightgreen.svg)](#suíte-de-testes-e2e)
 [![Built by: Leo K Digital](https://img.shields.io/badge/Built%20By-Leo%20K%20Digital-black.svg)](https://leokdigital.com.br)
 
 ---
