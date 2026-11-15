@@ -1,19 +1,19 @@
 {
+  "resolution": {
+    "width": 1080,
+    "height": 1920
+  },
   "width": 1080,
   "height": 1920,
   "fps": 60,
   "durationInFrames": 1800,
+  "duration_frames": 1800,
   "durationSeconds": 30,
+  "duration_seconds": 30,
   "client": "Exemplo Tech Solutions",
   "domain": "exemplotech.com.br",
-  "entrypoint": "src/motion/index.html",
-  "output": "artifacts/motion_output.mp4",
-  "renderEngine": "hyperframes-gsap",
-  "renderOptions": {
-    "viewport": {
-      "width": 1080,
-      "height": 1920
-    },
-    "deviceScaleFactor": 1
-  }
+  "engine": "HyperFrames + GSAP 3.12.5",
+  "outputFormat": "mp4",
+  "videoCodec": "libx264",
+  "audioCodec": "aac"
 }

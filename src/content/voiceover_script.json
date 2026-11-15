@@ -5,32 +5,46 @@
   "language": "pt-BR",
   "tone": "assertivo, técnico e seguro",
   "durationFrames": 1800,
+  "duration_frames": 1800,
   "durationSeconds": 30,
+  "duration_seconds": 30,
   "fps": 60,
   "scenes": [
     {
       "timeRange": "0s - 5s",
+      "duration_seconds": 5,
+      "durationSeconds": 5,
+      "duration_frames": 300,
       "durationFrames": 300,
       "hook": "Você já conhece a Exemplo Tech Solutions?",
-      "narration": "Em Curitiba, quando o assunto é desenvolvimento de software e consultoria digital, você precisa de autoridade técnica."
+      "narration": "Em Curitiba, quando o assunto é desenvolvimento de software e consultoria digital, você precisa de autoridade técnica com a Exemplo Tech Solutions."
     },
     {
       "timeRange": "5s - 15s",
+      "duration_seconds": 10,
+      "durationSeconds": 10,
+      "duration_frames": 600,
       "durationFrames": 600,
-      "problem": "Soluções genéricas que não trazem resultado",
-      "narration": "Chega de improviso. Sua empresa merece soluções modernas, rápidas e que realmente geram confiança."
+      "problem": "Soluções genéricas e improvisadas",
+      "narration": "Chega de processos manuais e retrabalho. Sua operação exige padrões modernos de engenharia e atendimento consultivo."
     },
     {
       "timeRange": "15s - 25s",
+      "duration_seconds": 10,
+      "durationSeconds": 10,
+      "duration_frames": 600,
       "durationFrames": 600,
       "solution": "O padrão de excelência",
-      "narration": "Com a Exemplo Tech Solutions, você conta com processos de ponta e acompanhamento de especialistas."
+      "narration": "Com a Exemplo Tech Solutions, você conta com tecnologia de ponta, processos validados e acompanhamento contínuo de especialistas."
     },
     {
       "timeRange": "25s - 30s",
+      "duration_seconds": 5,
+      "durationSeconds": 5,
+      "duration_frames": 300,
       "durationFrames": 300,
       "cta": "Acesse https://exemplotech.com.br",
-      "narration": "Acesse agora https://exemplotech.com.br e transforme seus resultados com a Exemplo Tech Solutions."
+      "narration": "Acesse agora https://exemplotech.com.br e posicione sua marca no topo com a Exemplo Tech Solutions."
     }
   ]
 }

@@ -1,9 +1,10 @@
 {
+  "brandName": "Exemplo Tech Solutions",
   "client": "Exemplo Tech Solutions",
   "domain": "exemplotech.com.br",
+  "founder": "Leonardo Kinoshita",
   "city": "Curitiba",
   "niche": "Desenvolvimento de Software e Consultoria Digital",
-  "targetPainPoint": "soluções amadoras e lentidão",
   "aarrr": {
     "acquisition": [
       "Google Search Local",
@@ -23,6 +24,14 @@
     ],
     "referral": [
       "Programa de Indicação"
+    ]
+  },
+  "positioning": {
+    "targetAudience": "Pequenas e médias empresas que buscam modernização digital e processos eficientes.",
+    "coreDifferentiators": [
+      "Atendimento especializado e consultivo",
+      "Processos validados de engenharia",
+      "Conformidade técnica e autoridade comprovada"
     ]
   }
 }

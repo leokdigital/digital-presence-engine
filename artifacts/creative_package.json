@@ -1,24 +1,17 @@
 {
+  "brandName": "Exemplo Tech Solutions",
   "client": "Exemplo Tech Solutions",
   "domain": "exemplotech.com.br",
-  "city": "Curitiba",
-  "niche": "Desenvolvimento de Software e Consultoria Digital",
+  "founder": "Leonardo Kinoshita",
   "variantsCount": 3,
   "formats": [
-    "Reels Vertical 1080x1920 (HyperFrames + GSAP)",
-    "Google Ads Responsive Search Ads (RSA)",
-    "Meta Ads (Feed & Stories)"
+    "Reels Vertical 1080x1920",
+    "Google RSA",
+    "Meta Ads"
   ],
-  "visualDirection": {
-    "resolution": "1080x1920",
-    "frameRate": "60fps",
-    "style": "Design System & Glassmorphism",
-    "primaryColor": "#4285F4",
-    "accentColor": "#30D158"
-  },
-  "voiceDirection": {
-    "voice": "Adam",
-    "language": "pt-BR",
-    "tone": "assertivo, técnico e seguro"
+  "guidelines": {
+    "tone": "assertivo, técnico e consultivo sem clichês genéricos",
+    "visualStyle": "Dark Tech Premium com glassmorphism translúcido",
+    "voiceover": "Adam"
   }
 }

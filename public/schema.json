@@ -2,20 +2,27 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "@id": "https://exemplotech.com.br/#organization",
+      "name": "Exemplo Tech Solutions",
+      "url": "https://exemplotech.com.br",
+      "logo": "https://exemplotech.com.br/logo.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Leonardo Kinoshita"
+      }
+    },
+    {
       "@type": [
-        "Organization",
         "LocalBusiness",
-        "ProfessionalService"
+        "ProfessionalService",
+        "LocalBusiness"
       ],
       "@id": "https://exemplotech.com.br/#business",
       "name": "Exemplo Tech Solutions",
       "url": "https://exemplotech.com.br",
       "description": "Desenvolvimento de Software e Consultoria Digital em Curitiba e região. Inovação e performance para sua empresa.",
       "slogan": "Inovação e performance para sua empresa.",
-      "founder": {
-        "@type": "Person",
-        "name": "Leonardo Kinoshita"
-      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Curitiba",
@@ -51,7 +58,7 @@
       "url": "https://exemplotech.com.br",
       "name": "Exemplo Tech Solutions",
       "publisher": {
-        "@id": "https://exemplotech.com.br/#business"
+        "@id": "https://exemplotech.com.br/#organization"
       },
       "inLanguage": "pt-BR"
     },
@@ -62,8 +69,11 @@
       "provider": {
         "@id": "https://exemplotech.com.br/#business"
       },
-      "serviceType": "Desenvolvimento de Software Sob Medida",
-      "areaServed": "Curitiba"
+      "areaServed": {
+        "@type": "City",
+        "name": "Curitiba"
+      },
+      "description": "Desenvolvimento de Software Sob Medida especializado oferecido por Exemplo Tech Solutions em Curitiba e região."
     },
     {
       "@type": "Service",
@@ -72,8 +82,11 @@
       "provider": {
         "@id": "https://exemplotech.com.br/#business"
       },
-      "serviceType": "Criação de Sites de Alta Performance",
-      "areaServed": "Curitiba"
+      "areaServed": {
+        "@type": "City",
+        "name": "Curitiba"
+      },
+      "description": "Criação de Sites de Alta Performance especializado oferecido por Exemplo Tech Solutions em Curitiba e região."
     },
     {
       "@type": "Service",
@@ -82,8 +95,11 @@
       "provider": {
         "@id": "https://exemplotech.com.br/#business"
       },
-      "serviceType": "Otimização SEO Local e GEO para IAs",
-      "areaServed": "Curitiba"
+      "areaServed": {
+        "@type": "City",
+        "name": "Curitiba"
+      },
+      "description": "Otimização SEO Local e GEO para IAs especializado oferecido por Exemplo Tech Solutions em Curitiba e região."
     },
     {
       "@type": "Service",
@@ -92,8 +108,11 @@
       "provider": {
         "@id": "https://exemplotech.com.br/#business"
       },
-      "serviceType": "Automação de Processos Digitais",
-      "areaServed": "Curitiba"
+      "areaServed": {
+        "@type": "City",
+        "name": "Curitiba"
+      },
+      "description": "Automação de Processos Digitais especializado oferecido por Exemplo Tech Solutions em Curitiba e região."
     },
     {
       "@type": "FAQPage",

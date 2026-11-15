@@ -5,6 +5,12 @@
   --color-accent: #30D158;
   --color-warning: #FFD60A;
   --color-danger: #FF3B30;
+
+  --accent-red: #FF3B30;
+  --accent-yellow: #FFD60A;
+  --accent-blue: #4285F4;
+  --accent-green: #30D158;
+
   --text-main: #FFFFFF;
   --text-muted: #8E8E93;
 
@@ -12,8 +18,10 @@
   --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-bg: rgba(18, 18, 26, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: 16px;
+  backdrop-filter: blur(16px);
   --glow-primary: 0 0 20px #4285F466;
   --glow-accent: 0 0 20px #30D15866;
 }
