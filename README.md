@@ -5,26 +5,46 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D22.0.0-green.svg)](https://nodejs.org/)
 [![Tests: E2E](https://img.shields.io/badge/Tests-73%20Passing-brightgreen.svg)](#suíte-de-testes-e2e)
+[![Skill: Agent Ready](https://img.shields.io/badge/Agent%20Skill-SKILL.md-orange.svg)](SKILL.md)
 [![Built by: Leo K Digital](https://img.shields.io/badge/Built%20By-Leo%20K%20Digital-black.svg)](https://leokdigital.com.br)
 
 ---
 
-## 🎯 Sobre o Template
+## 🎯 Sobre o Template & Skill
 
-Este repositório é um **Sistema Operacional de Presença Digital para Agências e Consultores**. Ele permite criar a presença digital completa de um novo cliente (vídeos em motion code, anúncios de alta conversão, infraestrutura SEO para Google e robôs de IA, e suíte de testes de marca) em **menos de 2 minutos** apenas alterando um arquivo de configuração.
+Este repositório é um **Sistema Operacional de Presença Digital Whitelabel para Agências, Consultores e Agentes Autônomos de IA**. Ele permite criar a presença digital completa de qualquer empresa ou cliente (vídeos em motion code, anúncios de alta conversão, infraestrutura SEO para Google e robôs de IA, e suíte de testes de marca) em **menos de 2 minutos** apenas alterando um arquivo de configuração ou acionando a skill.
 
 ---
 
-## ⚡ Quickstart (Como Usar)
+## 🤖 Como Usar como Skill para Agentes de IA
+
+Este repositório possui especificação nativa [`SKILL.md`](SKILL.md), sendo compatível de fábrica com **Antigravity**, **Claude Code**, **Codex**, **Cursor** e outros agentes autônomos.
+
+### Instalação Global de Skill para Agentes
+
+```bash
+# Para Antigravity / Gemini CLI:
+git clone https://github.com/leokdigital/digital-presence-engine.git ~/.gemini/config/skills/digital-presence-engine
+
+# Para Claude Code:
+git clone https://github.com/leokdigital/digital-presence-engine.git ~/.claude/skills/digital-presence-engine
+```
+
+Uma vez instalada, você pode pedir ao seu agente em qualquer projeto:
+> *"Configure a presença digital completa para meu novo cliente de odontologia com o preset clinica-odontologica e valide a qualidade com npm test."*
+
+---
+
+## ⚡ Quickstart (Uso Manual / CLI)
 
 ### 1. Clonar o Template ou usar "Use this template"
 ```bash
-git clone https://github.com/leokdigital/agency-digital-presence-template.git meu-novo-cliente
+git clone https://github.com/leokdigital/digital-presence-engine.git meu-novo-cliente
 cd meu-novo-cliente
 ```
 
 ### 2. Escolha um Preset ou Edite `client.config.json`
-Você pode rodar com um dos presets incluídos:
+Você pode rodar instantaneamente com um dos presets incluídos:
 ```bash
 # Para Clínica Odontológica / Saúde:
 npm run setup -- --preset=clinica-odontologica
@@ -36,7 +56,7 @@ npm run setup -- --preset=advocacia
 npm run setup -- --preset=restaurante
 ```
 
-Ou edite diretamente o arquivo **`client.config.json`** com o nome da empresa, cores e nicho do seu cliente e rode:
+Ou edite diretamente o arquivo **`client.config.json`** com o nome da empresa, cores hexadecimais, logotipo, tom de voz e nicho do seu cliente e compile:
 ```bash
 node scripts/setup-client.mjs
 ```
