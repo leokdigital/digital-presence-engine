@@ -11,7 +11,9 @@
     "test:tier2": "node --test tests/e2e/tier2_invariants.test.mjs",
     "test:tier3": "node --test tests/e2e/tier3_pipeline.test.mjs",
     "test:tier4": "node --test tests/e2e/tier4_operational.test.mjs",
-    "motion:render": "npx hyperframes render src/motion/index.html -o artifacts/motion_output.mp4"
+    "motion:render": "npx hyperframes render src/motion/index.html -o artifacts/motion_output.mp4",
+    "sync": "git add . && (git commit -m \"sync: update assets and deliverables\" || true) && git push origin main",
+    "pull": "git pull origin main"
   },
   "keywords": [
     "agency-engine",
