@@ -1,0 +1,19 @@
+:root {
+  --bg-primary: #0A0A0F;
+  --bg-surface: #12121A;
+  --color-primary: #4285F4;
+  --color-accent: #30D158;
+  --color-warning: #FFD60A;
+  --color-danger: #FF3B30;
+  --text-main: #FFFFFF;
+  --text-muted: #8E8E93;
+
+  --font-heading: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glow-primary: 0 0 20px #4285F466;
+  --glow-accent: 0 0 20px #30D15866;
+}

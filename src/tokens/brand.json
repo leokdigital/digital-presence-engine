@@ -1,0 +1,32 @@
+{
+  "name": "Exemplo Tech Solutions",
+  "domain": "exemplotech.com.br",
+  "slogan": "Inovação e performance para sua empresa.",
+  "founder": "Leonardo Kinoshita",
+  "niche": "Desenvolvimento de Software e Consultoria Digital",
+  "city": "Curitiba",
+  "colors": {
+    "background": "#0A0A0F",
+    "surface": "#12121A",
+    "primary": "#4285F4",
+    "accent": "#30D158",
+    "warning": "#FFD60A",
+    "danger": "#FF3B30",
+    "text": "#FFFFFF",
+    "textMuted": "#8E8E93"
+  },
+  "typography": {
+    "heading": "Plus Jakarta Sans",
+    "body": "Plus Jakarta Sans",
+    "mono": "JetBrains Mono"
+  },
+  "motion": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 60,
+    "durationSeconds": 30,
+    "voice": "Adam",
+    "voiceLanguage": "pt-BR",
+    "voiceTone": "assertivo, técnico e seguro"
+  }
+}

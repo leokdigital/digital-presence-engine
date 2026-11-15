@@ -1,0 +1,42 @@
+{
+  "clientName": "Clínica Sorriso & Arte",
+  "domain": "clinicasorrisoeart.com.br",
+  "founder": "Dra. Mariana Costa",
+  "email": "contato@clinicasorrisoeart.com.br",
+  "phone": "+55 41 3333-8888",
+  "city": "Curitiba",
+  "state": "PR",
+  "country": "BR",
+  "slogan": "Seu sorriso em primeiro lugar.",
+  "niche": "Odontologia Estética e Implantes Dentários",
+  "businessType": "Dentist",
+  "targetAudience": "Adultos e famílias que buscam tratamentos odontológicos avançados, alinhadores invisíveis e estética dental com conforto.",
+  "mainServices": [
+    "Implantes Dentários de Carga Imediata",
+    "Alinhadores Invisíveis e Ortodontia Digital",
+    "Facetas em Resina e Porcelana",
+    "Clareamento Dental a Laser"
+  ],
+  "theme": {
+    "background": "#F8FAFC",
+    "surface": "#FFFFFF",
+    "primary": "#0284C7",
+    "accent": "#0D9488",
+    "warning": "#F59E0B",
+    "danger": "#EF4444",
+    "text": "#0F172A",
+    "textMuted": "#64748B",
+    "fontHeading": "Plus Jakarta Sans",
+    "fontBody": "Plus Jakarta Sans",
+    "fontMono": "JetBrains Mono"
+  },
+  "motion": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 60,
+    "durationSeconds": 30,
+    "voice": "George",
+    "voiceLanguage": "pt-BR",
+    "voiceTone": "acolhedor, calmo, confiável e profissional"
+  }
+}

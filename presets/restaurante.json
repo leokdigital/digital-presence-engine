@@ -1,0 +1,42 @@
+{
+  "clientName": "Bistrô & Parrilla Curitiba",
+  "domain": "bistroparrillacuritiba.com.br",
+  "founder": "Chef Carlos Eduardo",
+  "email": "contato@bistroparrillacuritiba.com.br",
+  "phone": "+55 41 3222-1100",
+  "city": "Curitiba",
+  "state": "PR",
+  "country": "BR",
+  "slogan": "Gastronomia autêntica no coração de Curitiba.",
+  "niche": "Restaurante de Carnes Nobres e Cozinha Autoral",
+  "businessType": "Restaurant",
+  "targetAudience": "Apreciadores de boa gastronomia, casais e eventos corporativos que buscam cortes nobres, ambiente aconchegante e carta de vinhos selecionada.",
+  "mainServices": [
+    "Almoço Executivo Premium",
+    "Jantar à la Carte com Cortes Nobres",
+    "Eventos Privados e Confraternizações",
+    "Experiência com Harmonização de Vinhos"
+  ],
+  "theme": {
+    "background": "#181412",
+    "surface": "#261F1C",
+    "primary": "#E05A2B",
+    "accent": "#F59E0B",
+    "warning": "#FBBF24",
+    "danger": "#EF4444",
+    "text": "#FFFDF9",
+    "textMuted": "#A89F91",
+    "fontHeading": "Playfair Display",
+    "fontBody": "Plus Jakarta Sans",
+    "fontMono": "JetBrains Mono"
+  },
+  "motion": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 60,
+    "durationSeconds": 30,
+    "voice": "Antonio",
+    "voiceLanguage": "pt-BR",
+    "voiceTone": "envolvente, caloroso, elegante e sensorial"
+  }
+}

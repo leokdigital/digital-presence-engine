@@ -1,0 +1,42 @@
+{
+  "clientName": "Silva & Associados Advocacia",
+  "domain": "silvaassociadosadv.com.br",
+  "founder": "Dr. Roberto Silva",
+  "email": "contato@silvaassociadosadv.com.br",
+  "phone": "+55 41 3030-9090",
+  "city": "Curitiba",
+  "state": "PR",
+  "country": "BR",
+  "slogan": "Segurança jurídica e excelência estratégica.",
+  "niche": "Direito Empresarial, Tributário e Trabalhista",
+  "businessType": "LegalService",
+  "targetAudience": "Empresários e gestores corporativos que buscam blindagem patrimonial, compliance trabalhista e recuperação tributária.",
+  "mainServices": [
+    "Assessoria Jurídica Empresarial Mensal",
+    "Recuperação de Créditos Tributários",
+    "Defesa Trabalhista Patronal",
+    "Planejamento Sucessório e Holding Familiar"
+  ],
+  "theme": {
+    "background": "#0F172A",
+    "surface": "#1E293B",
+    "primary": "#D97706",
+    "accent": "#38BDF8",
+    "warning": "#F59E0B",
+    "danger": "#F43F5E",
+    "text": "#F8FAFC",
+    "textMuted": "#94A3B8",
+    "fontHeading": "Cinzel",
+    "fontBody": "Plus Jakarta Sans",
+    "fontMono": "JetBrains Mono"
+  },
+  "motion": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 60,
+    "durationSeconds": 30,
+    "voice": "Adam",
+    "voiceLanguage": "pt-BR",
+    "voiceTone": "sóbrio, formal, autoritário e seguro"
+  }
+}

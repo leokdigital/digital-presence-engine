@@ -1,0 +1,42 @@
+{
+  "clientName": "Exemplo Tech Solutions",
+  "domain": "exemplotech.com.br",
+  "founder": "Leonardo Kinoshita",
+  "email": "contato@exemplotech.com.br",
+  "phone": "+55 41 99999-9999",
+  "city": "Curitiba",
+  "state": "PR",
+  "country": "BR",
+  "slogan": "Inovação e performance para sua empresa.",
+  "niche": "Desenvolvimento de Software e Consultoria Digital",
+  "businessType": "LocalBusiness",
+  "targetAudience": "Pequenas e médias empresas que buscam modernização digital e processos eficientes.",
+  "mainServices": [
+    "Desenvolvimento de Software Sob Medida",
+    "Criação de Sites de Alta Performance",
+    "Otimização SEO Local e GEO para IAs",
+    "Automação de Processos Digitais"
+  ],
+  "theme": {
+    "background": "#0A0A0F",
+    "surface": "#12121A",
+    "primary": "#4285F4",
+    "accent": "#30D158",
+    "warning": "#FFD60A",
+    "danger": "#FF3B30",
+    "text": "#FFFFFF",
+    "textMuted": "#8E8E93",
+    "fontHeading": "Plus Jakarta Sans",
+    "fontBody": "Plus Jakarta Sans",
+    "fontMono": "JetBrains Mono"
+  },
+  "motion": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 60,
+    "durationSeconds": 30,
+    "voice": "Adam",
+    "voiceLanguage": "pt-BR",
+    "voiceTone": "assertivo, técnico e seguro"
+  }
+}

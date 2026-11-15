@@ -1,0 +1,73 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://exemplotech.com.br/#business",
+      "name": "Exemplo Tech Solutions",
+      "url": "https://exemplotech.com.br",
+      "description": "Desenvolvimento de Software e Consultoria Digital em Curitiba e região. Inovação e performance para sua empresa.",
+      "slogan": "Inovação e performance para sua empresa.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Curitiba",
+        "addressRegion": "PR",
+        "addressCountry": "BR"
+      },
+      "telephone": "+55 41 99999-9999",
+      "email": "contato@exemplotech.com.br",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Curitiba"
+        },
+        {
+          "@type": "State",
+          "name": "PR"
+        },
+        {
+          "@type": "Country",
+          "name": "Brasil"
+        }
+      ],
+      "serviceType": [
+        "Desenvolvimento de Software Sob Medida",
+        "Criação de Sites de Alta Performance",
+        "Otimização SEO Local e GEO para IAs",
+        "Automação de Processos Digitais"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://exemplotech.com.br/#website",
+      "url": "https://exemplotech.com.br",
+      "name": "Exemplo Tech Solutions",
+      "publisher": {
+        "@id": "https://exemplotech.com.br/#business"
+      },
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://exemplotech.com.br/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Como funciona o atendimento da Exemplo Tech Solutions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Exemplo Tech Solutions oferece atendimento presencial e digital para Curitiba e região, com foco em Desenvolvimento de Software e Consultoria Digital e soluções sob medida para cada cliente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Onde encontrar a Exemplo Tech Solutions em Curitiba?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Estamos localizados em Curitiba - PR, atendendo pelo site oficial https://exemplotech.com.br e telefone +55 41 99999-9999."
+          }
+        }
+      ]
+    }
+  ]
+}

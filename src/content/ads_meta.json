@@ -1,0 +1,17 @@
+{
+  "campaign": "Meta Ads - Exemplo Tech Solutions",
+  "variations": [
+    {
+      "hook": "Você procura desenvolvimento de software e consultoria digital de alta qualidade em Curitiba?",
+      "body": "Conheça a Exemplo Tech Solutions. Combinamos técnica, agilidade e compromisso para entregar o melhor resultado para você.",
+      "cta": "Saiba Mais",
+      "url": "https://exemplotech.com.br"
+    },
+    {
+      "hook": "Inovação e performance para sua empresa.",
+      "body": "Não perca tempo com soluções amadoras. A Exemplo Tech Solutions tem a experiência necessária em Desenvolvimento de Software e Consultoria Digital.",
+      "cta": "Fale no WhatsApp",
+      "url": "https://exemplotech.com.br"
+    }
+  ]
+}

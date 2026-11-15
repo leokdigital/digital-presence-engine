@@ -1,0 +1,36 @@
+{
+  "name": "agency-digital-presence-template",
+  "version": "1.0.0",
+  "description": "High-performance AI agent operating system & client presence engine for digital agencies. Dynamic brand tokens, motion reels, GEO/AEO, and E2E brand compliance suite.",
+  "type": "module",
+  "main": "src/tokens/brand.json",
+  "scripts": {
+    "setup": "node scripts/setup-client.mjs",
+    "test": "node --test tests/e2e/runner.test.mjs",
+    "test:tier1": "node --test tests/e2e/tier1_coverage.test.mjs",
+    "test:tier2": "node --test tests/e2e/tier2_invariants.test.mjs",
+    "test:tier3": "node --test tests/e2e/tier3_pipeline.test.mjs",
+    "test:tier4": "node --test tests/e2e/tier4_operational.test.mjs",
+    "motion:render": "npx hyperframes render src/motion/index.html -o artifacts/motion_output.mp4"
+  },
+  "keywords": [
+    "agency-engine",
+    "ai-agents",
+    "hyperframes",
+    "gsap",
+    "geo",
+    "aeo",
+    "seo",
+    "e2e-testing",
+    "whitelabel",
+    "marketing-automation"
+  ],
+  "author": "Leo K Digital <contato@leokdigital.com.br> (https://leokdigital.com.br)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5"
+  }
+}
