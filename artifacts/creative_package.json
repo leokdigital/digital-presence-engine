@@ -1,10 +1,24 @@
 {
   "client": "Exemplo Tech Solutions",
   "domain": "exemplotech.com.br",
+  "city": "Curitiba",
+  "niche": "Desenvolvimento de Software e Consultoria Digital",
   "variantsCount": 3,
   "formats": [
-    "Reels Vertical 1080x1920",
-    "Google RSA",
-    "Meta Ads"
-  ]
+    "Reels Vertical 1080x1920 (HyperFrames + GSAP)",
+    "Google Ads Responsive Search Ads (RSA)",
+    "Meta Ads (Feed & Stories)"
+  ],
+  "visualDirection": {
+    "resolution": "1080x1920",
+    "frameRate": "60fps",
+    "style": "Design System & Glassmorphism",
+    "primaryColor": "#4285F4",
+    "accentColor": "#30D158"
+  },
+  "voiceDirection": {
+    "voice": "Adam",
+    "language": "pt-BR",
+    "tone": "assertivo, técnico e seguro"
+  }
 }

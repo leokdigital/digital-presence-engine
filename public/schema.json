@@ -2,12 +2,20 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": [
+        "Organization",
+        "LocalBusiness",
+        "ProfessionalService"
+      ],
       "@id": "https://exemplotech.com.br/#business",
       "name": "Exemplo Tech Solutions",
       "url": "https://exemplotech.com.br",
       "description": "Desenvolvimento de Software e Consultoria Digital em Curitiba e região. Inovação e performance para sua empresa.",
       "slogan": "Inovação e performance para sua empresa.",
+      "founder": {
+        "@type": "Person",
+        "name": "Leonardo Kinoshita"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Curitiba",
@@ -46,6 +54,46 @@
         "@id": "https://exemplotech.com.br/#business"
       },
       "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://exemplotech.com.br/#service-1",
+      "name": "Desenvolvimento de Software Sob Medida",
+      "provider": {
+        "@id": "https://exemplotech.com.br/#business"
+      },
+      "serviceType": "Desenvolvimento de Software Sob Medida",
+      "areaServed": "Curitiba"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://exemplotech.com.br/#service-2",
+      "name": "Criação de Sites de Alta Performance",
+      "provider": {
+        "@id": "https://exemplotech.com.br/#business"
+      },
+      "serviceType": "Criação de Sites de Alta Performance",
+      "areaServed": "Curitiba"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://exemplotech.com.br/#service-3",
+      "name": "Otimização SEO Local e GEO para IAs",
+      "provider": {
+        "@id": "https://exemplotech.com.br/#business"
+      },
+      "serviceType": "Otimização SEO Local e GEO para IAs",
+      "areaServed": "Curitiba"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://exemplotech.com.br/#service-4",
+      "name": "Automação de Processos Digitais",
+      "provider": {
+        "@id": "https://exemplotech.com.br/#business"
+      },
+      "serviceType": "Automação de Processos Digitais",
+      "areaServed": "Curitiba"
     },
     {
       "@type": "FAQPage",

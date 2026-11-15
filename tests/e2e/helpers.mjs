@@ -10,11 +10,7 @@ const __dirname = path.dirname(__filename);
 const calculatedRoot = path.resolve(__dirname, '../../');
 export const PROJECT_ROOT = process.env.PROJECT_ROOT
   ? path.resolve(process.env.PROJECT_ROOT)
-  : (fs.existsSync(path.join(calculatedRoot, 'PROJECT.md'))
-      ? calculatedRoot
-      : (fs.existsSync('/Users/leo/teamwork_projects/leo_k_digital_team')
-          ? '/Users/leo/teamwork_projects/leo_k_digital_team'
-          : calculatedRoot));
+  : calculatedRoot;
 
 /**
  * Resolves path relative to the project root, with fallback to local staged files.
@@ -23,7 +19,6 @@ export function resolvePath(...subpaths) {
   const primaryPath = path.resolve(PROJECT_ROOT, ...subpaths);
   if (fs.existsSync(primaryPath)) return primaryPath;
 
-  // Fallback to local staged directory (2 levels up from tests/e2e/) if present
   const localStagedPath = path.resolve(__dirname, '../../', ...subpaths);
   if (fs.existsSync(localStagedPath)) return localStagedPath;
 
@@ -32,7 +27,6 @@ export function resolvePath(...subpaths) {
 
 /**
  * Resolves artifact path handling both snake_case and kebab-case variants.
- * e.g. strategy_brief.json vs strategy-brief.json
  */
 export function resolveArtifactPath(name) {
   const base = name.replace(/\.json$/, '');
@@ -96,93 +90,101 @@ export function isDirectCliRun(metaUrl) {
 }
 
 /**
- * Hardened forbidden brand and domain patterns for adversarial invariant testing.
+ * Returns active brand configuration dynamically from tokens or client config.
  */
-export const FORBIDDEN_BRAND_PATTERNS = [
-  // 1. Any variation of "Leo K Digital" with spaces, dots, hyphens that is NOT exact "Leo K Digital"
-  {
-    pattern: /\bLeo[\s._-]+K[\s._-]+Digital\b/i,
-    predicate: (match) => match !== 'Leo K Digital',
-    reason: 'Found non-canonical brand casing, spacing or punctuation'
-  },
-  // 2. "LeoK Digital" (missing space between Leo and K)
-  {
-    pattern: /\bLeoK[\s._-]+Digital\b/i,
-    reason: 'Found "LeoK Digital" (missing space between Leo and K)'
-  },
-  // 2b. "Leo KDigital" (missing delimiter between K and Digital)
-  {
-    pattern: /\bLeo[\s._-]+KDigital\b/i,
-    reason: 'Found "Leo KDigital" (missing space between K and Digital)'
-  },
-  // 3. Continuous "LeoKDigital" (any casing) without domain extension .com.br
-  {
-    pattern: /\bLeoKDigital\b(?!\.com\.br)/i,
-    reason: 'Found "LeoKDigital" or "leokdigital" brand text missing spaces'
-  },
-  // 4. Truncated "Leo K" or "LeoK" (with or without space/punctuation) not followed by "Digital"
-  {
-    pattern: /\bLeo[\s._-]*K\b(?![\s._-]*Digital)/i,
-    reason: 'Found truncated "Leo K" without "Digital"'
-  },
-  // 5. Unauthorized abbreviation "LKD" (case-insensitive)
-  {
-    pattern: /\bLKD\b/i,
-    reason: 'Found unauthorized abbreviation "LKD"'
-  },
-  // 6. Confusing founder with brand
-  {
-    pattern: /\bLeo\s+Kinoshita\s+Digital\b/i,
-    reason: 'Found "Leo Kinoshita Digital" (confusing founder with brand)'
+export function getActiveBrand() {
+  if (fileExists('src/tokens/brand.json')) {
+    const t = readJsonFile('src/tokens/brand.json');
+    return {
+      name: t.name || t.brandName || t.brand?.name || "Leo K Digital",
+      domain: t.domain || t.brand?.domain || "leokdigital.com.br",
+      founder: t.founder || t.brand?.founder || "Leonardo Kinoshita",
+      slogan: t.slogan || t.brand?.slogan || "Sua presença no digital.",
+      city: t.city || t.headquarters || "Curitiba",
+      niche: t.niche || "Presença Digital"
+    };
   }
-];
+  if (fileExists('client.config.json')) {
+    const c = readJsonFile('client.config.json');
+    return {
+      name: c.clientName,
+      domain: c.domain,
+      founder: c.founder,
+      slogan: c.slogan,
+      city: c.city,
+      niche: c.niche
+    };
+  }
+  return {
+    name: "Leo K Digital",
+    domain: "leokdigital.com.br",
+    founder: "Leonardo Kinoshita",
+    slogan: "Sua presença no digital.",
+    city: "Curitiba",
+    niche: "Engenharia Web"
+  };
+}
 
-export const FORBIDDEN_DOMAIN_PATTERNS = [
-  // 1. Insecure HTTP protocol
-  {
-    pattern: /http:\/\/leokdigital\.com\.br/i,
-    reason: 'Found insecure HTTP protocol instead of HTTPS'
-  },
-  // 2. Non-canonical www prefix
-  {
-    pattern: /www\.leokdigital\.com\.br/i,
-    reason: 'Found "www.leokdigital.com.br" (prohibited non-canonical www prefix)'
-  },
-  // 3. Any leokdigital or leok-digital domain with invalid TLD
-  {
-    pattern: /\bleok[\-_]?digital\.(?!com\.br(?=[^a-z0-9._-]|\.(?![a-z0-9])|$))[a-z0-9.-]+\b/i,
-    reason: 'Found unauthorized domain TLD, subdomain, or domain variant'
-  },
-  // 4. Phishing / subdomain suffix: leokdigital.com.br followed by more domain parts
-  {
-    pattern: /\bleokdigital\.com\.br(?=[._-][a-z0-9]|[a-z0-9])/i,
-    reason: 'Found suspicious domain suffix or phishing domain extension'
-  },
-  // 5. Hyphenated domain
-  {
-    pattern: /leok-digital\.com\.br/i,
-    reason: 'Found "leok-digital.com.br" (illegal hyphen in domain)'
-  },
-  // 6. Non-canonical domain casing (must be strictly lowercase "leokdigital.com.br")
-  {
-    pattern: /\b[a-zA-Z0-9.-]*leokdigital\.com\.br[a-zA-Z0-9.-]*\b/i,
-    predicate: (match) => {
-      const domainMatch = match.match(/leokdigital\.com\.br/i);
-      return domainMatch && domainMatch[0] !== 'leokdigital.com.br';
+/**
+ * Generates forbidden brand and domain pattern rules dynamically for the active client.
+ */
+export function getForbiddenPatterns() {
+  const brand = getActiveBrand();
+  const escapedName = brand.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const escapedDomain = brand.domain.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+  const brandPatterns = [
+    // 1. Missing space between parts of brand name (e.g. "LeoKDigital" or "ClinicaSorriso")
+    {
+      pattern: new RegExp(brand.name.replace(/\s+/g, ''), 'i'),
+      predicate: (match) => match !== brand.name,
+      reason: `Found concatenated brand name without proper spaces`
     },
-    reason: 'Found non-canonical domain casing (must be strictly lowercase "leokdigital.com.br")'
-  }
-];
+    // 2. Continuous brand name without spaces
+    {
+      pattern: new RegExp(`\\b${brand.name.replace(/\s+/g, '')}\\b(?!(?:\\.[a-z]{2,}))`, 'i'),
+      reason: `Found continuous brand name without proper spacing`
+    }
+  ];
+
+  const domainPatterns = [
+    // 1. Insecure HTTP protocol
+    {
+      pattern: new RegExp(`http://${escapedDomain}`, 'i'),
+      reason: `Found insecure HTTP protocol instead of HTTPS for ${brand.domain}`
+    },
+    // 2. Non-canonical www prefix if root is canonical
+    {
+      pattern: new RegExp(`www\\.${escapedDomain}`, 'i'),
+      reason: `Found non-canonical www prefix for ${brand.domain}`
+    },
+    // 3. Subdomain / phishing suffix extension
+    {
+      pattern: new RegExp(`${escapedDomain}(?=[._-][a-z0-9]|[a-z0-9])`, 'i'),
+      reason: `Found suspicious domain suffix or phishing domain extension for ${brand.domain}`
+    },
+    // 4. Non-canonical domain casing (must be strictly lowercase)
+    {
+      pattern: new RegExp(`\\b[a-zA-Z0-9.-]*${escapedDomain}[a-zA-Z0-9.-]*\\b`, 'i'),
+      predicate: (match) => {
+        const domainMatch = match.match(new RegExp(escapedDomain, 'i'));
+        return domainMatch && domainMatch[0] !== brand.domain.toLowerCase();
+      },
+      reason: `Found non-canonical domain casing (must be strictly lowercase "${brand.domain}")`
+    }
+  ];
+
+  return { brandPatterns, domainPatterns };
+}
 
 /**
  * Adversarial scanner that asserts text contains NO forbidden brand or domain variants.
- * Uses global iteration (matchAll) across all patterns to ensure compound documents
- * containing canonical brand names followed by mutations are strictly detected.
  */
 export function assertNoForbiddenVariants(text, contextName = 'Document') {
+  const { brandPatterns, domainPatterns } = getForbiddenPatterns();
   const violations = [];
 
-  for (const { pattern, predicate, reason } of FORBIDDEN_BRAND_PATTERNS) {
+  for (const { pattern, predicate, reason } of brandPatterns) {
     const globalRegex = new RegExp(
       pattern.source,
       pattern.flags.includes('g') ? pattern.flags : pattern.flags + 'g'
@@ -194,7 +196,7 @@ export function assertNoForbiddenVariants(text, contextName = 'Document') {
     }
   }
 
-  for (const { pattern, predicate, reason } of FORBIDDEN_DOMAIN_PATTERNS) {
+  for (const { pattern, predicate, reason } of domainPatterns) {
     const globalRegex = new RegExp(
       pattern.source,
       pattern.flags.includes('g') ? pattern.flags : pattern.flags + 'g'

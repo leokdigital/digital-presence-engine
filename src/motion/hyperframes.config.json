@@ -3,6 +3,17 @@
   "height": 1920,
   "fps": 60,
   "durationInFrames": 1800,
+  "durationSeconds": 30,
   "client": "Exemplo Tech Solutions",
-  "domain": "exemplotech.com.br"
+  "domain": "exemplotech.com.br",
+  "entrypoint": "src/motion/index.html",
+  "output": "artifacts/motion_output.mp4",
+  "renderEngine": "hyperframes-gsap",
+  "renderOptions": {
+    "viewport": {
+      "width": 1080,
+      "height": 1920
+    },
+    "deviceScaleFactor": 1
+  }
 }

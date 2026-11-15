@@ -10,21 +10,25 @@
   "scenes": [
     {
       "timeRange": "0s - 5s",
+      "durationFrames": 300,
       "hook": "Você já conhece a Exemplo Tech Solutions?",
-      "narration": "Em Curitiba, quando o assunto é desenvolvimento de software e consultoria digital, você precisa de autoridade."
+      "narration": "Em Curitiba, quando o assunto é desenvolvimento de software e consultoria digital, você precisa de autoridade técnica."
     },
     {
       "timeRange": "5s - 15s",
+      "durationFrames": 600,
       "problem": "Soluções genéricas que não trazem resultado",
       "narration": "Chega de improviso. Sua empresa merece soluções modernas, rápidas e que realmente geram confiança."
     },
     {
       "timeRange": "15s - 25s",
+      "durationFrames": 600,
       "solution": "O padrão de excelência",
-      "narration": "Com a Exemplo Tech Solutions, você conta com tecnologia de ponta e acompanhamento de especialistas."
+      "narration": "Com a Exemplo Tech Solutions, você conta com processos de ponta e acompanhamento de especialistas."
     },
     {
       "timeRange": "25s - 30s",
+      "durationFrames": 300,
       "cta": "Acesse https://exemplotech.com.br",
       "narration": "Acesse agora https://exemplotech.com.br e transforme seus resultados com a Exemplo Tech Solutions."
     }
