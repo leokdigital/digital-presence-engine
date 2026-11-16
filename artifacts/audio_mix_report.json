@@ -1,0 +1,152 @@
+{
+  "timestamp": "2026-11-16T16:50:10.103Z",
+  "engine": "Leo K Digital Sound Design Engine",
+  "master_standards": {
+    "target_lufs": -14,
+    "true_peak_dbtp": -1,
+    "voice_ducking_db": -15,
+    "pause_before_drop_seconds": 0.4
+  },
+  "voice_track": {
+    "voice_name": "Adam",
+    "language": "pt-BR",
+    "scenes_count": 4,
+    "total_frames": 1800
+  },
+  "events_count": 12,
+  "cue_sheet": [
+    {
+      "id": "evt_01_hook_whoosh",
+      "action": "transicao_entrada",
+      "category": "whoosh",
+      "sfx_type": "whoosh_pesado",
+      "exact_visual_time_s": 0.1,
+      "audio_trigger_time_s": 0,
+      "offset_lead_ms": 200,
+      "volume_db": -6,
+      "tonal_key": "Am"
+    },
+    {
+      "id": "evt_02_chat_balloon_pop",
+      "action": "balao_pergunta_surge",
+      "category": "pop",
+      "sfx_type": "pop_suave",
+      "exact_visual_time_s": 1.5,
+      "audio_trigger_time_s": 1.485,
+      "offset_lead_ms": 15,
+      "volume_db": -10,
+      "tonal_key": "neutral"
+    },
+    {
+      "id": "evt_03_typing_keyboard",
+      "action": "digitacao_nicho",
+      "category": "digitacao",
+      "sfx_type": "teclado_mecanico_rapido",
+      "exact_visual_time_s": 2.8,
+      "audio_trigger_time_s": 2.792,
+      "offset_lead_ms": 8,
+      "volume_db": -14,
+      "tonal_key": "neutral"
+    },
+    {
+      "id": "evt_04_git_branch_glint",
+      "action": "bifurcacao_branch_feixe",
+      "category": "brilho",
+      "sfx_type": "pulso_neon_glint",
+      "exact_visual_time_s": 6,
+      "audio_trigger_time_s": 5.96,
+      "offset_lead_ms": 40,
+      "volume_db": -8,
+      "tonal_key": "Am"
+    },
+    {
+      "id": "evt_05_asset_card_cascade_1",
+      "action": "card_tokens_entra",
+      "category": "pop",
+      "sfx_type": "pop_acustico",
+      "exact_visual_time_s": 12,
+      "audio_trigger_time_s": 11.985,
+      "offset_lead_ms": 15,
+      "volume_db": -9,
+      "tonal_key": "neutral"
+    },
+    {
+      "id": "evt_06_asset_card_cascade_2",
+      "action": "card_reels_entra",
+      "category": "pop",
+      "sfx_type": "pop_acustico",
+      "exact_visual_time_s": 13.2,
+      "audio_trigger_time_s": 13.185,
+      "offset_lead_ms": 15,
+      "volume_db": -9,
+      "tonal_key": "neutral"
+    },
+    {
+      "id": "evt_07_asset_card_cascade_3",
+      "action": "card_schemas_entra",
+      "category": "pop",
+      "sfx_type": "pop_acustico",
+      "exact_visual_time_s": 14.5,
+      "audio_trigger_time_s": 14.485,
+      "offset_lead_ms": 15,
+      "volume_db": -9,
+      "tonal_key": "neutral"
+    },
+    {
+      "id": "evt_08_cursor_click_button",
+      "action": "cursor_clica_aprovar",
+      "category": "clique",
+      "sfx_type": "clique_mouse_tactil",
+      "exact_visual_time_s": 19.8,
+      "audio_trigger_time_s": 19.79,
+      "offset_lead_ms": 10,
+      "volume_db": -5,
+      "tonal_key": "neutral"
+    },
+    {
+      "id": "evt_09_stamp_slam_impact",
+      "action": "carimbo_aprovado_bate",
+      "category": "carimbo",
+      "sfx_type": "impacto_carimbo_grave",
+      "exact_visual_time_s": 20.3,
+      "audio_trigger_time_s": 20.275,
+      "offset_lead_ms": 25,
+      "volume_db": -2,
+      "tonal_key": "Am"
+    },
+    {
+      "id": "evt_10_chime_success_gate",
+      "action": "suite_73_testes_verde",
+      "category": "sucesso",
+      "sfx_type": "sino_sucesso_tonal",
+      "exact_visual_time_s": 21,
+      "audio_trigger_time_s": 20.95,
+      "offset_lead_ms": 50,
+      "volume_db": -8,
+      "tonal_key": "Am"
+    },
+    {
+      "id": "evt_11_logo_reveal_riser",
+      "action": "revelacao_logo_3d_lk",
+      "category": "riser",
+      "sfx_type": "riser_cinematografico",
+      "exact_visual_time_s": 24,
+      "audio_trigger_time_s": 23.985,
+      "offset_lead_ms": 15,
+      "volume_db": -6,
+      "tonal_key": "Am"
+    },
+    {
+      "id": "evt_12_cta_typing_send",
+      "action": "digitacao_engine_cta",
+      "category": "digitacao",
+      "sfx_type": "teclado_touch_envio",
+      "exact_visual_time_s": 26.5,
+      "audio_trigger_time_s": 26.492,
+      "offset_lead_ms": 8,
+      "volume_db": -12,
+      "tonal_key": "neutral"
+    }
+  ],
+  "ffmpeg_loudnorm_filter": "loudnorm=I=-14:TP=-1:LRA=7:measured_I=-18:measured_TP=-1.5:measured_LRA=6:linear=true"
+}

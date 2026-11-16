@@ -379,3 +379,38 @@ Todo entregável do Milestone 4 deve satisfazer a 100% dos critérios abaixo ant
 - [ ] **Sincronia Exata com Voiceover**: 5 cenas divididas estritamente nos intervalos 0–300, 300–660, 660–1080, 1080–1440 e 1440–1800 frames.
 - [ ] **Invariantes Absolutos**: 100% de presença exata de `"Leo K Digital"` e `"leokdigital.com.br"`; zero ocorrências de variantes proibidas.
 - [ ] **Sucesso na Suíte E2E**: Testes das quatro camadas (`Tier 1`, `Tier 2`, `Tier 3` e `Tier 4`) passam sem erros.
+
+---
+
+## 11. Padrões Avançados de Física de Motion & Sound Design (Palácio Mental & Estudio-IA)
+
+Com base na engenharia reversa do acervo **Palácio Mental** (131 referências virais de 58 criadores) e na arquitetura do `estudio-ia`:
+
+### 11.1 Constantes Físicas de Mola e Curvas de Transição
+Para evitar animações plásticas ou duras:
+- **Mola Elástica para UI em Código**:
+  $$1 - e^{-\zeta \omega t} \left(\cos \omega_d t + \frac{\zeta \omega}{\omega_d} \sin \omega_d t\right)$$
+  - *Elementos de apoio e balões*: $\zeta = 0.56$ e $\omega \approx 12$ (overshoot de ~12% com assentamento suave em 0.6s).
+  - *Interfaces firmes e botões*: $\zeta = 0.72$ e $\omega \approx 15$ (sem ressalto perceptível).
+- **Curvas Bézier Padronizadas**:
+  - `cubic-bezier(.86, 0, .07, 1)`: Cortes e transições secas de alto impacto.
+  - `cubic-bezier(.33, 0, .23, 1)`: Câmera contínua viajando entre blocos de interface.
+
+### 11.2 Hero Container Morphing (Sem Cortes Falsos)
+- **Regra de Escala**: Nunca animar `scale` em cartões de UI, pois estica fontes, descalibra padding e deforma a espessura de borda (`border-width`).
+- **Padrão Morph**: Animar `width`, `height`, `borderRadius` e cor sobre o mesmo elemento base `{cx, cy, w, h, r, cor}`.
+
+### 11.3 Regra de Retenção: "Nada Antes de Ser Dito"
+- Nenhum card ou elemento visual aparece na tela antes da palavra que o justifica ser pronunciada na locução (no máximo 0.15s de antecipação).
+- O ritmo de explicativos mobile exige:
+  - 1 evento visual relevante a cada ~1.0 segundo.
+  - Troca de bloco a cada ~2.0 segundos, na primeira palavra da frase.
+  - Zero quadros mortos (manter câmera com deriva contínua lenta de `scale: 1.0 -> 1.03`).
+
+### 11.4 Motor de Sound Design Baseado em Eventos
+- O som não é um arquivo avulso aleatório; ele é governado pelo mapa declarativo `src/motion/events.json`.
+- **Alinhamento de Pico Acústico**: Cada efeito sonoro entra em `tempo = evento - (pico_ms / 1000)` para que o transiente coincida com o quadro do impacto.
+- **Ducking Dinâmico**: Trilha musical abaixada em -15 dB quando há fala, subindo +6 dB nos respiros.
+- **Respiro Pré-Drop**: Silêncio total de 0.3s a 0.5s imediatamente antes do clímax (ex.: antes da batida do carimbo `APROVADO`).
+- **Masterização**: Normalização estrita para **-14 LUFS** integrado e pico verdadeiro **$\le -1.0$ dBTP** via filtro `loudnorm`.
+

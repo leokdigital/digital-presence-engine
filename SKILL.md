@@ -1,6 +1,6 @@
 ---
 name: digital-presence-engine
-description: Automated agency-grade digital presence engine by Leo K Digital. Generates dynamic brand tokens, vertical motion reels (GSAP/HyperFrames), SEO/GEO/AEO schemas, copy, and runs a 73-point E2E quality gate for any client or niche. Use when setting up, generating, or auditing a complete digital presence for a company.
+description: Automated agency-grade digital presence engine by Leo K Digital. Generates dynamic brand tokens, vertical motion reels (GSAP/HyperFrames), event-driven sound design (-14 LUFS), SEO/GEO/AEO schemas, Palácio Mental motion reference intelligence (131 curated styles), and runs a 79-point E2E quality gate for any client or niche. Use when setting up, generating, or auditing a complete digital presence for a company.
 ---
 
 # Digital Presence Engine
@@ -16,9 +16,12 @@ An automated, open-source engine for digital agencies, developers, and AI agents
 Activate this skill when you need to:
 - Generate brand tokens (`brand.json`, `theme.css`) from any company profile, hex colors, and typography.
 - Generate vertical high-converting motion reels (1080x1920 60fps) powered by GSAP and HyperFrames.
+- Execute event-driven sound design (`events.json` + `sound-design-engine.mjs`) with precise SFX transient alignment, music ducking (-15 dB), and -14 LUFS broadcast mastering.
+- Leverage the **Palácio Mental Reference Intelligence** (`docs/references/palacio_mental_catalogo.md`) with 131 battle-tested motion references across 17 styles (UI-produto, SaaS, Dark Tech, Apple Claro, Narrado).
+- Inspect videos frame-by-frame and generate mosaic contact sheets with `node scripts/inspect-reference.mjs <video>`.
 - Generate Google Ads RSA, Meta Ads hooks, and voiceover scripts tailored to a business niche.
 - Generate deep technical SEO and GEO/AEO machine context (`public/schema.json`, `llms.txt`, `robots.txt`).
-- Validate complete brand compliance and asset integrity with a 73-point native Node.js E2E test suite.
+- Validate complete brand compliance and asset integrity with a **79-point native Node.js E2E test suite** across 5 tiers.
 
 ---
 
@@ -73,8 +76,20 @@ Then compile the assets:
 node scripts/setup-client.mjs
 ```
 
-### 3. Run Quality Verification (73 E2E Tests)
-Always run the test suite to verify 100% compliance:
+### 3. Sound Design & Audio Mixing Engine
+Compile synchronized sound effects and master audio:
+```bash
+node scripts/sound-design-engine.mjs
+```
+
+### 4. Frame-by-Frame Video Inspection (Contact Sheet)
+Inspect any reference video or rendered reel:
+```bash
+node scripts/inspect-reference.mjs artifacts/videos/meu_video.mp4 --grid=4x3
+```
+
+### 5. Run Quality Verification (79 E2E Tests)
+Always run the 5-tier test suite to verify 100% compliance:
 
 ```bash
 npm test
@@ -86,7 +101,9 @@ npm test
 
 1. **Design Tokens**: `src/tokens/brand.json` & `src/styles/theme.css`
 2. **Motion Video**: `src/motion/index.html` & `src/motion/main.js` (GSAP 60fps)
-3. **Advertising Copy**: `src/content/ads_google_rsa.json` & `src/content/ads_meta.json`
-4. **Voiceover Script**: `src/content/voiceover_script.json`
-5. **SEO & AEO Schemas**: `public/schema.json`, `public/llms.txt`, `public/robots.txt`
-6. **Strategy Handoffs**: `artifacts/strategy_brief.json` & `artifacts/creative_package.json`
+3. **Sound Design Map & Report**: `src/motion/events.json` & `artifacts/audio_mix_report.json`
+4. **Advertising Copy**: `src/content/ads_google_rsa.json` & `src/content/ads_meta.json`
+5. **Voiceover Script**: `src/content/voiceover_script.json`
+6. **SEO & AEO Schemas**: `public/schema.json`, `public/llms.txt`, `public/robots.txt`
+7. **Reference Intelligence**: `docs/references/palacio_mental_catalogo.md` (131 referências)
+8. **Strategy Handoffs**: `artifacts/strategy_brief.json` & `artifacts/creative_package.json`

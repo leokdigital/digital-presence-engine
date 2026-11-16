@@ -1,0 +1,138 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "project": "Leo K Digital Motion Sound Design",
+  "master_standards": {
+    "target_lufs": -14,
+    "true_peak_dbtp": -1.0,
+    "voice_ducking_db": -15.0,
+    "pause_before_drop_seconds": 0.4
+  },
+  "events": [
+    {
+      "id": "evt_01_hook_whoosh",
+      "timestamp_seconds": 0.1,
+      "frame": 6,
+      "action": "transicao_entrada",
+      "sfx_type": "whoosh_pesado",
+      "sfx_category": "whoosh",
+      "volume_db": -6,
+      "tonal_key": "Am",
+      "notes": "Entrada rasgada do título do problema no primeiro frame"
+    },
+    {
+      "id": "evt_02_chat_balloon_pop",
+      "timestamp_seconds": 1.5,
+      "frame": 90,
+      "action": "balao_pergunta_surge",
+      "sfx_type": "pop_suave",
+      "sfx_category": "pop",
+      "volume_db": -10,
+      "notes": "Pergunta do agente aparece na janela macOS"
+    },
+    {
+      "id": "evt_03_typing_keyboard",
+      "timestamp_seconds": 2.8,
+      "frame": 168,
+      "action": "digitacao_nicho",
+      "sfx_type": "teclado_mecanico_rapido",
+      "sfx_category": "digitacao",
+      "volume_db": -14,
+      "notes": "Digitação de Clínica Odontológica em Curitiba"
+    },
+    {
+      "id": "evt_04_git_branch_glint",
+      "timestamp_seconds": 6.0,
+      "frame": 360,
+      "action": "bifurcacao_branch_feixe",
+      "sfx_type": "pulso_neon_glint",
+      "sfx_category": "brilho",
+      "volume_db": -8,
+      "tonal_key": "Am",
+      "notes": "Feixe de luz corre pela linha de metrô da branch"
+    },
+    {
+      "id": "evt_05_asset_card_cascade_1",
+      "timestamp_seconds": 12.0,
+      "frame": 720,
+      "action": "card_tokens_entra",
+      "sfx_type": "pop_acustico",
+      "sfx_category": "pop",
+      "volume_db": -9,
+      "notes": "Card 1 - Design Tokens empilha na tela"
+    },
+    {
+      "id": "evt_06_asset_card_cascade_2",
+      "timestamp_seconds": 13.2,
+      "frame": 792,
+      "action": "card_reels_entra",
+      "sfx_type": "pop_acustico",
+      "sfx_category": "pop",
+      "volume_db": -9,
+      "notes": "Card 2 - Reels 60fps empilha"
+    },
+    {
+      "id": "evt_07_asset_card_cascade_3",
+      "timestamp_seconds": 14.5,
+      "frame": 870,
+      "action": "card_schemas_entra",
+      "sfx_type": "pop_acustico",
+      "sfx_category": "pop",
+      "volume_db": -9,
+      "notes": "Card 3 - Schemas SEO/GEO empilha"
+    },
+    {
+      "id": "evt_08_cursor_click_button",
+      "timestamp_seconds": 19.8,
+      "frame": 1188,
+      "action": "cursor_clica_aprovar",
+      "sfx_type": "clique_mouse_tactil",
+      "sfx_category": "clique",
+      "volume_db": -5,
+      "notes": "Cursor atinge o botão [APROVAR PROJETO] e afunda"
+    },
+    {
+      "id": "evt_09_stamp_slam_impact",
+      "timestamp_seconds": 20.3,
+      "frame": 1218,
+      "action": "carimbo_aprovado_bate",
+      "sfx_type": "impacto_carimbo_grave",
+      "sfx_category": "carimbo",
+      "volume_db": -2,
+      "tonal_key": "Am",
+      "screen_shake": true,
+      "notes": "Carimbo verde esmeralda APROVADO bate com screen shake"
+    },
+    {
+      "id": "evt_10_chime_success_gate",
+      "timestamp_seconds": 21.0,
+      "frame": 1260,
+      "action": "suite_73_testes_verde",
+      "sfx_type": "sino_sucesso_tonal",
+      "sfx_category": "sucesso",
+      "volume_db": -8,
+      "tonal_key": "Am",
+      "notes": "Chime harmônico ao completar 73/73 testes aprovados"
+    },
+    {
+      "id": "evt_11_logo_reveal_riser",
+      "timestamp_seconds": 24.0,
+      "frame": 1440,
+      "action": "revelacao_logo_3d_lk",
+      "sfx_type": "riser_cinematografico",
+      "sfx_category": "riser",
+      "volume_db": -6,
+      "tonal_key": "Am",
+      "notes": "Subida tonal para o encerramento da marca"
+    },
+    {
+      "id": "evt_12_cta_typing_send",
+      "timestamp_seconds": 26.5,
+      "frame": 1590,
+      "action": "digitacao_engine_cta",
+      "sfx_type": "teclado_touch_envio",
+      "sfx_category": "digitacao",
+      "volume_db": -12,
+      "notes": "Digitação ENGINE no campo do Instagram e pulso do aviãozinho"
+    }
+  ]
+}
