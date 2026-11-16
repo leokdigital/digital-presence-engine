@@ -382,9 +382,9 @@ Todo entregável do Milestone 4 deve satisfazer a 100% dos critérios abaixo ant
 
 ---
 
-## 11. Padrões Avançados de Física de Motion & Sound Design (Palácio Mental & Estudio-IA)
+## 11. Padrões Avançados de Física de Motion & Sound Design (Motion Vault)
 
-Com base na engenharia reversa do acervo **Palácio Mental** (131 referências virais de 58 criadores) e na arquitetura do `estudio-ia`:
+Com base na engenharia reversa do acervo **Motion Vault** (131 referências virais de 58 criadores internacionais) e nos padrões modernos de motion:
 
 ### 11.1 Constantes Físicas de Mola e Curvas de Transição
 Para evitar animações plásticas ou duras:

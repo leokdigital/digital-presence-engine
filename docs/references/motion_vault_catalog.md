@@ -1,6 +1,6 @@
-# Palácio Mental: Catálogo de Referências de Motion Design
+# Motion Vault: Catálogo de Referências de Motion Design
 
-> Curadoria técnica extraída do guia **Palácio Mental** (Do Zero ao Motion com IA) e integrada ao **Digital Presence Engine da Leo K Digital**.
+> Curadoria técnica e engenharia reversa de motion design da **Leo K Digital**.
 > Base: 131 referências de 58 criadores internacionais, organizadas por estilos, técnicas e links diretos.
 
 ---

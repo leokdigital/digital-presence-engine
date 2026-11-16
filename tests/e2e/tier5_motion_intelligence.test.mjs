@@ -14,11 +14,11 @@ import {
 export async function runTier5MotionIntelligence(suiteName = 'Tier 5: Motion Engineering & Reference Intelligence') {
   await describe(suiteName, () => {
 
-    describe('5.1 Palácio Mental Reference Intelligence', () => {
-      it('docs/references/palacio_mental_catalogo.md exists, has length >= 1000 and indexes 131 references', () => {
-        const catPath = resolvePath('docs/references/palacio_mental_catalogo.md');
-        assert.ok(fileExists(catPath), 'palacio_mental_catalogo.md must exist');
-        const content = readProjectFile('docs/references/palacio_mental_catalogo.md');
+    describe('5.1 Motion Vault Reference Intelligence', () => {
+      it('docs/references/motion_vault_catalog.md exists, has length >= 1000 and indexes 131 references', () => {
+        const catPath = resolvePath('docs/references/motion_vault_catalog.md');
+        assert.ok(fileExists(catPath), 'motion_vault_catalog.md must exist');
+        const content = readProjectFile('docs/references/motion_vault_catalog.md');
         assert.ok(content.length >= 1000, `Expected >= 1000 chars, got ${content.length}`);
         assert.ok(content.includes('131 referências'), 'Must mention 131 referências');
         assert.ok(content.includes('UI-Produto'), 'Must categorize UI-Produto');

@@ -1,6 +1,6 @@
 ---
 name: digital-presence-engine
-description: Automated agency-grade digital presence engine by Leo K Digital. Generates dynamic brand tokens, vertical motion reels (GSAP/HyperFrames), event-driven sound design (-14 LUFS), SEO/GEO/AEO schemas, Palácio Mental motion reference intelligence (131 curated styles), and runs a 79-point E2E quality gate for any client or niche. Use when setting up, generating, or auditing a complete digital presence for a company.
+description: Automated agency-grade digital presence engine by Leo K Digital. Generates dynamic brand tokens, vertical motion reels (GSAP/HyperFrames), event-driven sound design (-14 LUFS), SEO/GEO/AEO schemas, Motion Vault reference intelligence (131 curated styles), and runs a 79-point E2E quality gate for any client or niche. Use when setting up, generating, or auditing a complete digital presence for a company.
 ---
 
 # Digital Presence Engine
@@ -17,7 +17,7 @@ Activate this skill when you need to:
 - Generate brand tokens (`brand.json`, `theme.css`) from any company profile, hex colors, and typography.
 - Generate vertical high-converting motion reels (1080x1920 60fps) powered by GSAP and HyperFrames.
 - Execute event-driven sound design (`events.json` + `sound-design-engine.mjs`) with precise SFX transient alignment, music ducking (-15 dB), and -14 LUFS broadcast mastering.
-- Leverage the **Palácio Mental Reference Intelligence** (`docs/references/palacio_mental_catalogo.md`) with 131 battle-tested motion references across 17 styles (UI-produto, SaaS, Dark Tech, Apple Claro, Narrado).
+- Leverage the **Motion Vault Reference Intelligence** (`docs/references/motion_vault_catalog.md`) with 131 battle-tested motion references across 17 styles (UI-produto, SaaS, Dark Tech, Apple Claro, Narrado).
 - Inspect videos frame-by-frame and generate mosaic contact sheets with `node scripts/inspect-reference.mjs <video>`.
 - Generate Google Ads RSA, Meta Ads hooks, and voiceover scripts tailored to a business niche.
 - Generate deep technical SEO and GEO/AEO machine context (`public/schema.json`, `llms.txt`, `robots.txt`).
@@ -105,5 +105,5 @@ npm test
 4. **Advertising Copy**: `src/content/ads_google_rsa.json` & `src/content/ads_meta.json`
 5. **Voiceover Script**: `src/content/voiceover_script.json`
 6. **SEO & AEO Schemas**: `public/schema.json`, `public/llms.txt`, `public/robots.txt`
-7. **Reference Intelligence**: `docs/references/palacio_mental_catalogo.md` (131 referências)
+7. **Reference Intelligence**: `docs/references/motion_vault_catalog.md` (131 referências)
 8. **Strategy Handoffs**: `artifacts/strategy_brief.json` & `artifacts/creative_package.json`
