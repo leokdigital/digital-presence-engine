@@ -1,6 +1,6 @@
 ---
 name: digital-presence-engine
-description: Automated agency-grade digital presence engine by Leo K Digital. Generates dynamic brand tokens, vertical motion reels (GSAP/HyperFrames), event-driven sound design (-14 LUFS), SEO/GEO/AEO schemas, Motion Vault reference intelligence (131 curated styles), and runs a 79-point E2E quality gate for any client or niche. Use when setting up, generating, or auditing a complete digital presence for a company.
+description: Automated agency-grade digital presence engine by Leo K Digital. Generates dynamic brand tokens, vertical motion reels (GSAP/HyperFrames), cinematic landing pages (MotionSites recipes), native modern web performance (Google Chrome Modern Web Guidance), event-driven sound design (-14 LUFS), SEO/GEO/AEO schemas, Motion Vault reference intelligence (131 curated styles), and runs a 79-point E2E quality gate for any client or niche. Use when setting up, generating, or auditing a complete digital presence for a company.
 ---
 
 # Digital Presence Engine
@@ -15,6 +15,8 @@ An automated, open-source engine for digital agencies, developers, and AI agents
 
 Activate this skill when you need to:
 - Generate brand tokens (`brand.json`, `theme.css`) from any company profile, hex colors, and typography.
+- Build award-level cinematic landing pages and hero sections using **MotionSites Web Builder** techniques (media shelf, liquid glass, depth carousels, text reveals, and look-and-fix visual verification).
+- Enforce cutting-edge web performance and native browser standards using **Google Chrome Modern Web Guidance** (Popover API, Anchor Positioning, native `<dialog>`, View Transitions, and `scheduler.yield()` for 100/100 Core Web Vitals).
 - Generate vertical high-converting motion reels (1080x1920 60fps) powered by GSAP and HyperFrames.
 - Execute event-driven sound design (`events.json` + `sound-design-engine.mjs`) with precise SFX transient alignment, music ducking (-15 dB), and -14 LUFS broadcast mastering.
 - Leverage the **Motion Vault Reference Intelligence** (`docs/references/motion_vault_catalog.md`) with 131 battle-tested motion references across 17 styles (UI-produto, SaaS, Dark Tech, Apple Claro, Narrado).
@@ -93,6 +95,13 @@ Always run the 5-tier test suite to verify 100% compliance:
 
 ```bash
 npm test
+```
+
+### 6. Modern Web Guidance & Core Web Vitals Audit
+Scan codebase for obsolete JavaScript patterns and replace with native platform APIs:
+
+```bash
+npx -y modern-web-guidance@latest legacy-scan .
 ```
 
 ---
